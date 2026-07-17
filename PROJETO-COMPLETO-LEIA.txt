@@ -1,0 +1,14 @@
+Este ZIP é o projeto COMPLETO da Conexão Solidária.
+Deve conter na raiz:
+- ConexaoSolidaria.sln
+- Directory.Build.props
+- docker-compose.yml
+- src/ConexaoSolidaria.Api
+- src/ConexaoSolidaria.Application
+- src/ConexaoSolidaria.Contracts
+- src/ConexaoSolidaria.Domain
+- src/ConexaoSolidaria.DonationWorker
+- src/ConexaoSolidaria.Infrastructure
+- tests
+- deploy/kubernetes
+- scripts

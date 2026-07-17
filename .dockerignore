@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+**/.idea/
+.git/
+.gitignore
+.DS_Store
+__MACOSX/
+*.user
+*.suo
+*.cache
+*.log
+TestResults/
+coverage/

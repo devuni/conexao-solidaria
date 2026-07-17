@@ -1,0 +1,11 @@
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/bin/Release/net8.0/ConexaoSolidaria.Domain.deps.json
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/bin/Release/net8.0/ConexaoSolidaria.Domain.dll
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/bin/Release/net8.0/ConexaoSolidaria.Domain.pdb
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/ConexaoSolidaria.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/ConexaoSolidaria.Domain.AssemblyInfoInputs.cache
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/ConexaoSolidaria.Domain.AssemblyInfo.cs
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/ConexaoSolidaria.Domain.csproj.CoreCompileInputs.cache
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/ConexaoSolidaria.Domain.dll
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/refint/ConexaoSolidaria.Domain.dll
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/ConexaoSolidaria.Domain.pdb
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Domain/obj/Release/net8.0/ref/ConexaoSolidaria.Domain.dll

@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\ConexaoSolidaria.Domain\ConexaoSolidaria.Domain.csproj" />
+    <ProjectReference Include="..\ConexaoSolidaria.Contracts\ConexaoSolidaria.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <ItemGroup>
+    <ProjectReference Include="..\ConexaoSolidaria.Application\ConexaoSolidaria.Application.csproj" />
+    <ProjectReference Include="..\ConexaoSolidaria.Infrastructure\ConexaoSolidaria.Infrastructure.csproj" />
+    <ProjectReference Include="..\ConexaoSolidaria.Contracts\ConexaoSolidaria.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.27.0" />
+  </ItemGroup>
+</Project>

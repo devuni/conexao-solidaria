@@ -1,0 +1,11 @@
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/bin/Debug/net8.0/ConexaoSolidaria.Contracts.deps.json
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/bin/Debug/net8.0/ConexaoSolidaria.Contracts.dll
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/bin/Debug/net8.0/ConexaoSolidaria.Contracts.pdb
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/ConexaoSolidaria.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/ConexaoSolidaria.Contracts.AssemblyInfoInputs.cache
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/ConexaoSolidaria.Contracts.AssemblyInfo.cs
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/ConexaoSolidaria.Contracts.csproj.CoreCompileInputs.cache
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/ConexaoSolidaria.Contracts.dll
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/refint/ConexaoSolidaria.Contracts.dll
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/ConexaoSolidaria.Contracts.pdb
+/Users/carloseduardomagalhaes/Projeto-FIAP/conexao-solidaria-starter/src/ConexaoSolidaria.Contracts/obj/Debug/net8.0/ref/ConexaoSolidaria.Contracts.dll

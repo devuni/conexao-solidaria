@@ -1,0 +1,110 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: conexao-solidaria-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: conexao_solidaria
+      POSTGRES_USER: conexao
+      POSTGRES_PASSWORD: conexao_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U conexao -d conexao_solidaria"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  mongo:
+    image: mongo:7
+    container_name: conexao-solidaria-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: conexao-solidaria-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    container_name: conexao-solidaria-api
+    build:
+      context: .
+      dockerfile: src/ConexaoSolidaria.Api/Dockerfile
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__PostgreSql: Host=postgres;Port=5432;Database=conexao_solidaria;Username=conexao;Password=conexao_dev
+      ConnectionStrings__MongoDb: mongodb://mongo:27017/conexao_solidaria
+      RabbitMq__Host: rabbitmq
+      RabbitMq__Port: 5672
+      RabbitMq__Username: guest
+      RabbitMq__Password: guest
+      Jwt__Issuer: ConexaoSolidaria
+      Jwt__Audience: ConexaoSolidaria.Api
+      Jwt__Secret: conexao-solidaria-dev-secret-key-min-32-chars
+      Jwt__ExpiresInMinutes: 60
+      Seed__Gestor__Nome: Gestor ONG
+      Seed__Gestor__Email: gestor@conexaosolidaria.org
+      Seed__Gestor__Cpf: 93541134780
+      Seed__Gestor__Senha: Gestor@123456
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  donation-worker:
+    container_name: conexao-solidaria-donation-worker
+    build:
+      context: .
+      dockerfile: src/ConexaoSolidaria.DonationWorker/Dockerfile
+    restart: unless-stopped
+    environment:
+      DOTNET_ENVIRONMENT: Development
+      ConnectionStrings__PostgreSql: Host=postgres;Port=5432;Database=conexao_solidaria;Username=conexao;Password=conexao_dev
+      ConnectionStrings__MongoDb: mongodb://mongo:27017/conexao_solidaria
+      RabbitMq__Host: rabbitmq
+      RabbitMq__Port: 5672
+      RabbitMq__Username: guest
+      RabbitMq__Password: guest
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  mongo_data:
+  rabbitmq_data:
